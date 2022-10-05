@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-10-04T17:46:16 IST" name="Android" finished-at="2022-10-04T17:52:50 IST" duration-ms="394317">
+    <groups>
+    </groups>
+    <test started-at="2022-10-04T17:46:16 IST" name="Plobal" finished-at="2022-10-04T17:52:50 IST" duration-ms="394317">
+      <class name="com.Plobal.TestScripts.PlobalTestScripts">
+        <test-method is-config="true" signature="Before()[pri:0, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:46:26 IST" name="Before" finished-at="2022-10-04T17:46:38 IST" duration-ms="12116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Before -->
+        <test-method signature="plobalAppLaunch()[pri:0, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:46:38 IST" name="plobalAppLaunch" finished-at="2022-10-04T17:46:57 IST" duration-ms="18890" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- plobalAppLaunch -->
+        <test-method signature="plobalLogin()[pri:1, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:47:07 IST" name="plobalLogin" finished-at="2022-10-04T17:47:39 IST" duration-ms="31574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- plobalLogin -->
+        <test-method signature="plobalSelectItem(java.lang.String)[pri:2, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:47:45 IST" name="plobalSelectItem" finished-at="2022-10-04T17:48:06 IST" duration-ms="20829" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[S]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- plobalSelectItem -->
+        <test-method signature="plobalPaymentOption()[pri:4, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:48:14 IST" name="plobalPaymentOption" finished-at="2022-10-04T17:48:15 IST" duration-ms="435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- plobalPaymentOption -->
+        <test-method signature="plobalDeliveryAddress(java.lang.String)[pri:5, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:48:25 IST" name="plobalDeliveryAddress" finished-at="2022-10-04T17:49:50 IST" duration-ms="85655" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Confirm_Address]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- plobalDeliveryAddress -->
+        <test-method signature="plobalSearchProduct(java.lang.String)[pri:6, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:50:01 IST" name="plobalSearchProduct" finished-at="2022-10-04T17:51:59 IST" duration-ms="118466" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Confirm_Address]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- plobalSearchProduct -->
+        <test-method signature="plobalLogout()[pri:7, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:52:28 IST" name="plobalLogout" finished-at="2022-10-04T17:52:39 IST" duration-ms="11344" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- plobalLogout -->
+        <test-method is-config="true" signature="plobalAppQuit()[pri:0, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:52:50 IST" name="plobalAppQuit" finished-at="2022-10-04T17:52:50 IST" duration-ms="555" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- plobalAppQuit -->
+      </class> <!-- com.Plobal.TestScripts.PlobalTestScripts -->
+    </test> <!-- Plobal -->
+  </suite> <!-- Android -->
+</testng-results>

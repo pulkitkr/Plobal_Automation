@@ -1,0 +1,478 @@
+<html>
+<head>
+<title>TestNG:  RingPay</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>RingPay</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Sep 20 17:47:10 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>494 seconds (494680 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.RingPay.TestScripts.RingPayTestScripts.ringAuthApi()'><b>ringAuthApi</b><br>Test class: com.RingPay.TestScripts.RingPayTestScripts<br>Parameters: https://user-gateway.test.ideopay.in/api/v1/users/android/authentication</td>
+<td><div><pre>java.lang.NoClassDefFoundError: Could not initialize class com.github.fge.jsonschema.SchemaVersion
+	at com.github.fge.jsonschema.core.load.configuration.LoadingConfigurationBuilder.&lt;init&gt;(LoadingConfigurationBuilder.java:119)
+	at com.github.fge.jsonschema.core.load.configuration.LoadingConfiguration.byDefault(LoadingConfiguration.java:151)
+	at com.github.fge.jsonschema.main.JsonSchemaFactoryBuilder.&lt;init&gt;(JsonSchemaFactoryBuilder.java:67)
+	at com.github.fge.jsonschema.main.JsonSchemaFactory.newBuilder(JsonSchemaFactory.java:123)
+	at com.github.fge.jsonschema.main.JsonSchemaFactory.byDefault(JsonSchemaFactory.java:113)
+	at io.restassured.module.jsv.JsonSchemaValidatorSettings.&lt;init&gt;(JsonSchemaValidatorSettings.java:58)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.createSettings(JsonSchemaValidator.java:277)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:289)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:166)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
+	at com.business.RingPay.RingPayBusinessLogic.valid_auth_200(RingPayBusinessLogic.java:672)
+	at com.RingPay.TestScripts.RingPayTestScripts.ringAuthApi(RingPayTestScripts.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1037201686", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1037201686'><pre>java.lang.NoClassDefFoundError: Could not initialize class com.github.fge.jsonschema.SchemaVersion
+	at com.github.fge.jsonschema.core.load.configuration.LoadingConfigurationBuilder.&lt;init&gt;(LoadingConfigurationBuilder.java:119)
+	at com.github.fge.jsonschema.core.load.configuration.LoadingConfiguration.byDefault(LoadingConfiguration.java:151)
+	at com.github.fge.jsonschema.main.JsonSchemaFactoryBuilder.&lt;init&gt;(JsonSchemaFactoryBuilder.java:67)
+	at com.github.fge.jsonschema.main.JsonSchemaFactory.newBuilder(JsonSchemaFactory.java:123)
+	at com.github.fge.jsonschema.main.JsonSchemaFactory.byDefault(JsonSchemaFactory.java:113)
+	at io.restassured.module.jsv.JsonSchemaValidatorSettings.&lt;init&gt;(JsonSchemaValidatorSettings.java:58)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.createSettings(JsonSchemaValidator.java:277)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:289)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:166)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
+	at com.business.RingPay.RingPayBusinessLogic.valid_auth_200(RingPayBusinessLogic.java:672)
+	at com.RingPay.TestScripts.RingPayTestScripts.ringAuthApi(RingPayTestScripts.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.RingPay.TestScripts.RingPayTestScripts@5ef0d29e</td></tr>
+<tr>
+<td title='com.RingPay.TestScripts.RingPayTestScripts.ringLogout()'><b>ringLogout</b><br>Test class: com.RingPay.TestScripts.RingPayTestScripts</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@class=&apos;android.view.ViewGroup&apos; and ./parent::*[@class=&apos;android.view.ViewGroup&apos; and ./parent::*[@class=&apos;android.view.ViewGroup&apos;] and (./preceding-sibling::* | ./following-sibling::*)[@text=&apos;Available Limit&apos;]]] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.utility.Utilities.findElement(Utilities.java:165)
+	at com.utility.Utilities.explicitWaitVisibility(Utilities.java:1438)
+	at com.business.RingPay.RingPayBusinessLogic.ringPayLogout(RingPayBusinessLogic.java:603)
+	at com.RingPay.TestScripts.RingPayTestScripts.ringLogout(RingPayTestScripts.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-077G3EM&apos;, ip: &apos;172.31.98.190&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.ideopay.user.MainActivity, appPackage: com.ideopay.user.debug, autoAcceptAlerts: true, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.ideopay.user.MainActivity, appPackage: com.ideopay.user.debug, autoAcceptAlerts: true, automationName: uiautomator2, deviceName: Android, fullReset: false, newCommandTimeout: 300, platformName: android}, deviceApiLevel: 30, deviceManufacturer: Xiaomi, deviceModel: Redmi Note 9 Pro, deviceName: a595a510, deviceScreenDensity: 440, deviceScreenSize: 1080x2400, deviceUDID: a595a510, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 300, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 102, takesScreenshot: true, viewportRect: {height: 2152, left: 0, top: 102, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: a6a5e65d-ad62-4e26-92b5-cbaf7936dc91
+*** Element info: {Using=xpath, value=//*[@class=&apos;android.view.ViewGroup&apos; and ./parent::*[@class=&apos;android.view.ViewGroup&apos; and ./parent::*[@class=&apos;android.view.ViewGroup&apos;] and (./preceding-sibling::* | ./following-sibling::*)[@text=&apos;Available Limit&apos;]]]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 32 more
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace640995328", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace640995328'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@class=&apos;android.view.ViewGroup&apos; and ./parent::*[@class=&apos;android.view.ViewGroup&apos; and ./parent::*[@class=&apos;android.view.ViewGroup&apos;] and (./preceding-sibling::* | ./following-sibling::*)[@text=&apos;Available Limit&apos;]]] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.utility.Utilities.findElement(Utilities.java:165)
+	at com.utility.Utilities.explicitWaitVisibility(Utilities.java:1438)
+	at com.business.RingPay.RingPayBusinessLogic.ringPayLogout(RingPayBusinessLogic.java:603)
+	at com.RingPay.TestScripts.RingPayTestScripts.ringLogout(RingPayTestScripts.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-077G3EM&apos;, ip: &apos;172.31.98.190&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.ideopay.user.MainActivity, appPackage: com.ideopay.user.debug, autoAcceptAlerts: true, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.ideopay.user.MainActivity, appPackage: com.ideopay.user.debug, autoAcceptAlerts: true, automationName: uiautomator2, deviceName: Android, fullReset: false, newCommandTimeout: 300, platformName: android}, deviceApiLevel: 30, deviceManufacturer: Xiaomi, deviceModel: Redmi Note 9 Pro, deviceName: a595a510, deviceScreenDensity: 440, deviceScreenSize: 1080x2400, deviceUDID: a595a510, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 300, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 102, takesScreenshot: true, viewportRect: {height: 2152, left: 0, top: 102, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: a6a5e65d-ad62-4e26-92b5-cbaf7936dc91
+*** Element info: {Using=xpath, value=//*[@class=&apos;android.view.ViewGroup&apos; and ./parent::*[@class=&apos;android.view.ViewGroup&apos; and ./parent::*[@class=&apos;android.view.ViewGroup&apos;] and (./preceding-sibling::* | ./following-sibling::*)[@text=&apos;Available Limit&apos;]]]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 32 more
+</pre></div></td>
+<td>30</td>
+<td>com.RingPay.TestScripts.RingPayTestScripts@5ef0d29e</td></tr>
+<tr>
+<td title='com.RingPay.TestScripts.RingPayTestScripts.ringOtpApi()'><b>ringOtpApi</b><br>Test class: com.RingPay.TestScripts.RingPayTestScripts<br>Parameters: https://user-gateway.test.ideopay.in/api/v1/users/android/send-otp</td>
+<td><div><pre>java.lang.NoSuchMethodError: &apos;com.fasterxml.jackson.databind.ObjectReader com.fasterxml.jackson.databind.ObjectMapper.readerFor(java.lang.Class)&apos;
+	at com.github.fge.jackson.JsonNodeReader.&lt;init&gt;(JsonNodeReader.java:73)
+	at com.github.fge.jackson.JsonNodeReader.&lt;init&gt;(JsonNodeReader.java:81)
+	at com.github.fge.jackson.JsonLoader.&lt;clinit&gt;(JsonLoader.java:47)
+	at com.github.fge.jsonschema.SchemaVersion.&lt;init&gt;(SchemaVersion.java:66)
+	at com.github.fge.jsonschema.SchemaVersion.&lt;clinit&gt;(SchemaVersion.java:45)
+	at com.github.fge.jsonschema.core.load.configuration.LoadingConfigurationBuilder.&lt;init&gt;(LoadingConfigurationBuilder.java:119)
+	at com.github.fge.jsonschema.core.load.configuration.LoadingConfiguration.byDefault(LoadingConfiguration.java:151)
+	at com.github.fge.jsonschema.main.JsonSchemaFactoryBuilder.&lt;init&gt;(JsonSchemaFactoryBuilder.java:67)
+	at com.github.fge.jsonschema.main.JsonSchemaFactory.newBuilder(JsonSchemaFactory.java:123)
+	at com.github.fge.jsonschema.main.JsonSchemaFactory.byDefault(JsonSchemaFactory.java:113)
+	at io.restassured.module.jsv.JsonSchemaValidatorSettings.&lt;init&gt;(JsonSchemaValidatorSettings.java:58)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.createSettings(JsonSchemaValidator.java:277)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:289)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:166)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
+	at com.business.RingPay.RingPayBusinessLogic.valid_otp_200(RingPayBusinessLogic.java:649)
+	at com.RingPay.TestScripts.RingPayTestScripts.ringOtpApi(RingPayTestScripts.java:58)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2054926467", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2054926467'><pre>java.lang.NoSuchMethodError: &apos;com.fasterxml.jackson.databind.ObjectReader com.fasterxml.jackson.databind.ObjectMapper.readerFor(java.lang.Class)&apos;
+	at com.github.fge.jackson.JsonNodeReader.&lt;init&gt;(JsonNodeReader.java:73)
+	at com.github.fge.jackson.JsonNodeReader.&lt;init&gt;(JsonNodeReader.java:81)
+	at com.github.fge.jackson.JsonLoader.&lt;clinit&gt;(JsonLoader.java:47)
+	at com.github.fge.jsonschema.SchemaVersion.&lt;init&gt;(SchemaVersion.java:66)
+	at com.github.fge.jsonschema.SchemaVersion.&lt;clinit&gt;(SchemaVersion.java:45)
+	at com.github.fge.jsonschema.core.load.configuration.LoadingConfigurationBuilder.&lt;init&gt;(LoadingConfigurationBuilder.java:119)
+	at com.github.fge.jsonschema.core.load.configuration.LoadingConfiguration.byDefault(LoadingConfiguration.java:151)
+	at com.github.fge.jsonschema.main.JsonSchemaFactoryBuilder.&lt;init&gt;(JsonSchemaFactoryBuilder.java:67)
+	at com.github.fge.jsonschema.main.JsonSchemaFactory.newBuilder(JsonSchemaFactory.java:123)
+	at com.github.fge.jsonschema.main.JsonSchemaFactory.byDefault(JsonSchemaFactory.java:113)
+	at io.restassured.module.jsv.JsonSchemaValidatorSettings.&lt;init&gt;(JsonSchemaValidatorSettings.java:58)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.createSettings(JsonSchemaValidator.java:277)
+	at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:289)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:166)
+	at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
+	at com.business.RingPay.RingPayBusinessLogic.valid_otp_200(RingPayBusinessLogic.java:649)
+	at com.RingPay.TestScripts.RingPayTestScripts.ringOtpApi(RingPayTestScripts.java:58)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>1</td>
+<td>com.RingPay.TestScripts.RingPayTestScripts@5ef0d29e</td></tr>
+<tr>
+<td title='com.RingPay.TestScripts.RingPayTestScripts.ringRepayment()'><b>ringRepayment</b><br>Test class: com.RingPay.TestScripts.RingPayTestScripts<br>Parameters: 123</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@text=&apos;Your payment was successful&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.utility.Utilities.findElement(Utilities.java:165)
+	at com.utility.Utilities.getText(Utilities.java:409)
+	at com.business.RingPay.RingPayBusinessLogic.ringRepayment(RingPayBusinessLogic.java:540)
+	at com.RingPay.TestScripts.RingPayTestScripts.ringRepayment(RingPayTestScripts.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-077G3EM&apos;, ip: &apos;172.31.98.190&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.ideopay.user.MainActivity, appPackage: com.ideopay.user.debug, autoAcceptAlerts: true, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.ideopay.user.MainActivity, appPackage: com.ideopay.user.debug, autoAcceptAlerts: true, automationName: uiautomator2, deviceName: Android, fullReset: false, newCommandTimeout: 300, platformName: android}, deviceApiLevel: 30, deviceManufacturer: Xiaomi, deviceModel: Redmi Note 9 Pro, deviceName: a595a510, deviceScreenDensity: 440, deviceScreenSize: 1080x2400, deviceUDID: a595a510, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 300, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 102, takesScreenshot: true, viewportRect: {height: 2152, left: 0, top: 102, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: a6a5e65d-ad62-4e26-92b5-cbaf7936dc91
+*** Element info: {Using=xpath, value=//*[@text=&apos;Your payment was successful&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 32 more
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace988637485", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace988637485'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@text=&apos;Your payment was successful&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.utility.Utilities.findElement(Utilities.java:165)
+	at com.utility.Utilities.getText(Utilities.java:409)
+	at com.business.RingPay.RingPayBusinessLogic.ringRepayment(RingPayBusinessLogic.java:540)
+	at com.RingPay.TestScripts.RingPayTestScripts.ringRepayment(RingPayTestScripts.java:47)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:766)
+	at org.testng.TestRunner.run(TestRunner.java:587)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+	at org.testng.TestNG.runSuites(TestNG.java:1039)
+	at org.testng.TestNG.run(TestNG.java:1007)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-077G3EM&apos;, ip: &apos;172.31.98.190&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.3&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.ideopay.user.MainActivity, appPackage: com.ideopay.user.debug, autoAcceptAlerts: true, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: com.ideopay.user.MainActivity, appPackage: com.ideopay.user.debug, autoAcceptAlerts: true, automationName: uiautomator2, deviceName: Android, fullReset: false, newCommandTimeout: 300, platformName: android}, deviceApiLevel: 30, deviceManufacturer: Xiaomi, deviceModel: Redmi Note 9 Pro, deviceName: a595a510, deviceScreenDensity: 440, deviceScreenSize: 1080x2400, deviceUDID: a595a510, fullReset: false, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 300, pixelRatio: 2.75, platform: LINUX, platformName: Android, platformVersion: 11, statBarHeight: 102, takesScreenshot: true, viewportRect: {height: 2152, left: 0, top: 102, width: 1080}, warnings: {}, webStorageEnabled: false}
+Session ID: a6a5e65d-ad62-4e26-92b5-cbaf7936dc91
+*** Element info: {Using=xpath, value=//*[@text=&apos;Your payment was successful&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 32 more
+</pre></div></td>
+<td>73</td>
+<td>com.RingPay.TestScripts.RingPayTestScripts@5ef0d29e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.RingPay.TestScripts.RingPayTestScripts.ringMerchantPay()'><b>ringMerchantPay</b><br>Test class: com.RingPay.TestScripts.RingPayTestScripts<br>Parameters: rpy.ipmerchant1234191702@icici, 5000, 1</td>
+<td></td>
+<td>60</td>
+<td>com.RingPay.TestScripts.RingPayTestScripts@5ef0d29e</td></tr>
+<tr>
+<td title='com.RingPay.TestScripts.RingPayTestScripts.ringPayAppLaunch()'><b>ringPayAppLaunch</b><br>Test class: com.RingPay.TestScripts.RingPayTestScripts</td>
+<td></td>
+<td>9</td>
+<td>com.RingPay.TestScripts.RingPayTestScripts@5ef0d29e</td></tr>
+<tr>
+<td title='com.RingPay.TestScripts.RingPayTestScripts.ringPayLogin()'><b>ringPayLogin</b><br>Test class: com.RingPay.TestScripts.RingPayTestScripts<br>Parameters: 9731239214</td>
+<td></td>
+<td>48</td>
+<td>com.RingPay.TestScripts.RingPayTestScripts@5ef0d29e</td></tr>
+</table><p>
+</body>
+</html>

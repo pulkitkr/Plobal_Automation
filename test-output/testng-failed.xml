@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Android]" guice-stage="DEVELOPMENT">
+  <parameter name="testExecutionKey" value="PP-59"/>
+  <parameter name="address" value="Confirm_Address"/>
+  <parameter name="size" value="S"/>
+  <parameter name="runModule" value="Suite"/>
+  <parameter name="deliveryaddress" value="Confirm_Address"/>
+  <parameter name="runMode" value="Suites"/>
+  <listeners>
+    <listener class-name="com.extent.ExtentReporter"/>
+  </listeners>
+  <test thread-count="1" name="Plobal(failed)">
+    <classes>
+      <class name="com.Plobal.TestScripts.PlobalTestScripts">
+        <methods>
+          <include name="plobalLogout"/>
+          <include name="plobalAppQuit"/>
+          <include name="Before"/>
+        </methods>
+      </class> <!-- com.Plobal.TestScripts.PlobalTestScripts -->
+    </classes>
+  </test> <!-- Plobal(failed) -->
+</suite> <!-- Failed suite [Android] -->
