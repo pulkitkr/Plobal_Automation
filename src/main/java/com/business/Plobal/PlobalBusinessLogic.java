@@ -170,7 +170,7 @@ public class PlobalBusinessLogic extends Utilities {
 			verifyIsElementDisplayed(ProductPage.objWishlistImage, "Wish Button");
 
 			if (verifyIsElementDisplayed(ProductPage.objOutofStock,
-					getText(ProductPage.objOutofStock) + " is displayed")) {
+					getText(ProductPage.objOutofStock))) {
 				click(ProductPage.objSize, "Select Size Dropdown box");
 				verifyElementPresentAndClick(ProductPage.objuserSize(size), "Size selected");
 			}
