@@ -273,4 +273,78 @@ public class ExcelUpdate {
 			}
 		}
 	}
+	
+	public static void writeDataCleverTap(String result, String error) {
+		try {
+			XSSFWorkbook myExcelBook = new XSSFWorkbook(new FileInputStream(xlpath));
+			FileOutputStream output = new FileOutputStream(xlpath);
+			XSSFSheet myExcelSheet = myExcelBook.getSheet(sheet);
+//			myExcelSheet
+			XSSFRow xrow = myExcelSheet.getRow(row);
+			if (xrow == null) {
+				xrow = myExcelSheet.createRow(row);
+			}
+			Cell cell = null;
+			if(counter == 0) {
+				xrow = myExcelSheet.getRow(0);
+				if (xrow == null) {
+					xrow = myExcelSheet.createRow(0);
+				}
+				if (cell == null) {
+					cell = xrow.createCell(0);
+					cell.setCellValue("Module");
+					cell = xrow.createCell(1);
+					cell.setCellValue("Event");
+					cell = xrow.createCell(2);
+					cell.setCellValue("Properties");
+					cell = xrow.createCell(3);
+					cell.setCellValue("Result");
+					counter++;
+				}
+			}
+			// Update the value of cell
+			if (result.equals("true")) {
+				if (cell == null) {
+					cell = xrow.createCell(0);
+					cell.setCellValue(ModuleName);
+					cell = xrow.createCell(3);
+					cell.setCellValue(result);
+					cell = xrow.createCell(2);
+					cell.setCellValue(UserType);
+					row++;
+					passCounter++;
+				}
+			} else if (result.equals("false")) {
+				if (cell == null) {
+					cell = xrow.createCell(0);
+					cell.setCellValue(ModuleName);
+					cell = xrow.createCell(4);
+					cell.setCellValue(result);
+					cell = xrow.createCell(5);
+					cell.setCellValue(error);
+					cell = xrow.createCell(2);
+					cell.setCellValue(UserType);
+					row++;
+					failCounter++;
+				}
+			} else if (result.equals("Warning")) {
+				if (cell == null) {
+					cell = xrow.createCell(1);
+					cell.setCellValue(ModuleName);
+					cell = xrow.createCell(4);
+					cell.setCellValue(result);
+					cell = xrow.createCell(5);
+					cell.setCellValue(error);
+					cell = xrow.createCell(2);
+					cell.setCellValue(UserType);
+					row++;
+					warningCounter++;
+				}
+			}
+			myExcelBook.write(output);
+			myExcelBook.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

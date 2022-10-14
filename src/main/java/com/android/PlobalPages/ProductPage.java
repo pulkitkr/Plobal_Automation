@@ -11,7 +11,7 @@ public class ProductPage {
 	public static By objOpenProductText = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/txt_product_title']");
 	
 	//Add to cart Button
-	public static By objAddToCartBtn = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/btn_bottom_add_to_cart']");
+	public static By objAddToCartBtn = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/btn_bottom_add_to_cart' or text()='GO TO CART']");
 	
 	//Buy Now Button
 	public static By objBuyNowBtn = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/btn_bottom_buy_now']");
@@ -38,4 +38,28 @@ public class ProductPage {
 	public static By objuserSize(String size) {
 		return By.xpath("//*[@text='" + size + "']");
 	}
+	
+	//Cart page header
+	public static By objCartrHeader = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/textview_title']");
+	
+	//Product Name in cart page
+	public static By objProductName = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/txtview_product_name']");
+	
+	//Item price on cart page
+	public static By objProductPriceHeader = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/txtview_total']");
+	
+	//Cart image
+	public static By objProductBag = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/cart_custom_menu_imageView']");
+	
+	//Cart Product name
+	public static By objProductCartName = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/txtview_product_name']");
+	
+	//Barcode Scan
+	public static By objProductHeaderText = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/textview_title']");
+	
+	//Product Below Name
+	public static By objProductBelowName = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/txt_product_title']");
+	
+	//Product Price
+	public static By objProductPrice = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/txt_price_discounted']");
 }

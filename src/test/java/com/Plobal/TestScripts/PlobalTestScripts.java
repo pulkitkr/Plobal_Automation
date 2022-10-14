@@ -19,54 +19,69 @@ public class PlobalTestScripts {
 		Utilities.relaunch = true;
 		plobalBusiness = new com.business.Plobal.PlobalBusinessLogic("plobal");
 	}
-	
+
 	@Test(priority = 0)
-    public void plobalAppLaunch() throws Exception {
+	public void plobalAppLaunch() throws Exception {
 		plobalBusiness.plobalWelcome();
-		ExtentReporter.jiraID = "PP-58";
+		//ExtentReporter.jiraID = "PP-58";
 	}
-	
+
+	@Parameters({ "invalidEmailId", "invalidPassword", "validEmailId", "validPassword" })
 	@Test(priority = 1)
-    public void plobalLogin() throws Exception {
-		plobalBusiness.loginToApp();
-		ExtentReporter.jiraID = "PP-66";
+	public void plobalLogin(String invalidEmailId, String invalidPassword, String validEmailId, String validPassword)throws Exception {
+		plobalBusiness.loginToApp(invalidEmailId, invalidPassword, validEmailId, validPassword);
+		//ExtentReporter.jiraID = "PP-66";
 	}
-	
-	@Parameters({"size"})
+
+	@Parameters({ "size" })
 	@Test(priority = 2)
-    public void plobalSelectItem(String size) throws Exception {
+	public void plobalSelectItem(String size) throws Exception {
 		plobalBusiness.productItem(size);
-		ExtentReporter.jiraID = "PP-62";
+//		ExtentReporter.jiraID = "PP-62";
 	}
+//
+//	@Test(priority = 3)
+//	public void plobalPaymentOption() throws Exception {
+//		plobalBusiness.paymentOptions();
+//		ExtentReporter.jiraID = "PP-63";
+//	}
+//
+//	@Parameters({ "address" })
+//	@Test(priority = 4)
+//	public void plobalDeliveryAddress(String address) throws Exception {
+//		plobalBusiness.paymentCheckOut(address);
+//		ExtentReporter.jiraID = "PP-64";
+//	}
+//
+//	@Parameters({ "deliveryaddress" })
+//	@Test(priority = 5)
+//	public void plobalSearchProduct(String deliveryaddress) throws Exception {
+//		plobalBusiness.searchProduct(deliveryaddress);
+//		ExtentReporter.jiraID = "PP-65";
+//	}
+//
+//	@Parameters({ "searchAddress" })
+//	@Test(priority = 6)
+//	public void plobalSearchProductByBarCode(String searchAddress) throws Exception {
+//		plobalBusiness.barCodeSearch(searchAddress);
+//		ExtentReporter.jiraID = "PP-67";
+//	}
+//
+//	@Test(priority = 7)
+//	public void plobalLogout() throws Exception {
+//		plobalBusiness.logOut();
+//		ExtentReporter.jiraID = "PP-56";
+//	}
 	
-	@Test(priority = 4)
-    public void plobalPaymentOption() throws Exception {
-		plobalBusiness.paymentOptions();
-		ExtentReporter.jiraID = "PP-63";
+	@Parameters({ "cleverTapEmail","cleverTapPassword" , "email"})
+	@Test(priority = 8)
+	public void plobalCleverTap(String cleverTapEmail, String cleverTapPassword, String email) throws Exception {
+		plobalBusiness.cleverTap(cleverTapEmail,cleverTapPassword, email);
+		//ExtentReporter.jiraID = "PP-56";
 	}
-	
-	@Parameters({"address"})
-	@Test(priority = 5)
-    public void plobalDeliveryAddress(String address) throws Exception {
-		plobalBusiness.paymentCheckOut(address);
-		ExtentReporter.jiraID = "PP-64";
-	}
-	
-	@Parameters({"deliveryaddress"})
-	@Test(priority = 6)
-    public void plobalSearchProduct(String deliveryaddress) throws Exception {
-		plobalBusiness.searchProduct(deliveryaddress);
-		ExtentReporter.jiraID = "PP-65";
-	}
-	
-	@Test(priority = 7)
-    public void plobalLogout() throws Exception {
-		plobalBusiness.logOut();
-		ExtentReporter.jiraID = "PP-56";
-	}
-	
+
 	@AfterTest
-	public void plobalAppQuit() throws Exception{
+	public void plobalAppQuit() throws Exception {
 		plobalBusiness.TearDown();
 	}
 }

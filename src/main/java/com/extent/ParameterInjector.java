@@ -33,6 +33,8 @@ public class ParameterInjector implements IAlterSuiteListener {
 			params.put("url", "https://pwa-preprod2.zee5.com/");
 		} else if (suite.getParameter("url").equals("pwauat6")) {
 			params.put("url", "https://pwauat6.zee5.com/");
+		} else if (suite.getParameter("url").equals("url")) {
+			params.put("url", "https://plobal-test-shutterstock.myshopify.com/admin\"");
 		}
 
 		// Pass region specific data

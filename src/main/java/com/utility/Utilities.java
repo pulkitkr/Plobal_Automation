@@ -11,8 +11,10 @@ import java.util.Base64;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -611,25 +613,22 @@ public class Utilities extends ExtentReporter {
 	 * @param byLocator the by locator
 	 * @param text      the text
 	 */
+	/**
+	 * Type on a web element.
+	 * 
+	 * @param byLocator the by locator
+	 * @param text      the text
+	 */
 	public void type(By byLocator, String input, String FieldName) {
 		try {
-			waitTime(2000);
+			waitTime(1000);
 			if (!getPlatform().equals("Web")) {
 				Actions a = new Actions(getDriver());
-				if (FieldName.contains("Password")) {
-					a.sendKeys(DecryptPassword.decrypt(input));
-				} else {
-					a.sendKeys(input);
-				}
+				a.sendKeys(input);
 				a.perform();
 			} else {
 				WebElement element = findElement(byLocator);
-				if (FieldName.contains("Password")) {
-					// a.sendKeys(DecryptPassword.decrypt(input));
-					element.sendKeys(DecryptPassword.decrypt(input));
-				} else {
-					element.sendKeys(input);
-				}
+				element.sendKeys(input);
 			}
 			input = input.split("\n")[0];
 			logger.info("Typed the value " + input + " into " + FieldName);
@@ -2410,5 +2409,38 @@ public class Utilities extends ExtentReporter {
 
 		return (MobileElement) getDriver().findElement(MobileBy
 				.AndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(" + an + "(\"" + av + "\"))"));
+	}
+
+	/**
+	 * Switch to frame
+	 * 
+	 * @param frame_id
+	 */
+	public void switchFrame_id(String frame_id) {
+		getWebDriver().switchTo().frame(frame_id);
+	}
+
+	/**
+	 * Switch to frame
+	 * 
+	 * @param frame_id_xpath
+	 * @throws Exception
+	 */
+	public void switchFrame_xpath(By byLocator) throws Exception {
+		getWebDriver().switchTo().frame(findElement(byLocator));
+	}
+
+	/**
+	 * Switch to frame
+	 * @param frame_id
+	 */
+	public void switchBackFrame_id() {
+        getWebDriver().switchTo().parentFrame();
+    }
+
+	public String lowerToUpperBooleanValue(boolean event) {
+		String eventChange = String.valueOf(event);
+		eventChange = eventChange.toUpperCase();
+		return eventChange;
 	}
 }

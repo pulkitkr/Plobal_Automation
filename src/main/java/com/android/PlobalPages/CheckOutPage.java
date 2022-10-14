@@ -123,4 +123,7 @@ public class CheckOutPage {
 	
 	//Choose address edit button button
 	public static By objChooseAddressEditBtn = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/myaddresses_item_row_edit']");
+	
+	//place order button
+	public static By objplaceOrderBtn = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/btn_place_order']");
 }

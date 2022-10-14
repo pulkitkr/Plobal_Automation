@@ -12,6 +12,7 @@ import java.util.Base64;
 import java.util.Date;
 import java.util.Dictionary;
 import java.util.Hashtable;
+import java.util.LinkedHashMap;
 import java.util.stream.Stream;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -66,6 +67,8 @@ public class ExtentReporter implements ITestListener {
 	public static Dictionary<String, String> performaceMatrics = new Hashtable<String, String>();
 	static int passed = 0;
 	static int failed = 0;
+	
+	
 
 	/** The Constant logger. */
 	static LoggingUtils logger = new LoggingUtils();

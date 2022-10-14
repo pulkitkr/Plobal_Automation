@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
+
 import com.utility.LoggingUtils;
 
 public class DeviceDetails {

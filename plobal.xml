@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Android" parallel="false" thread-count="1">
 
-		
-	<!--<parameter name="userType" value="Guest" />-->  
+
+	<!--<parameter name="userType" value="Guest" />-->
 	<parameter name="runModule" value="Suite" />
-	<parameter name="runMode" value="Suites" /> 
+	<parameter name="runMode" value="Suites" />
 	<parameter name="testExecutionKey" value="PP-59" />
-	
+
+	<parameter name="invalidEmailId" value="abc@gmail.com"></parameter>
+	<parameter name="validEmailId" value="test@mailnesia.com"></parameter>
+	<parameter name="invalidPassword" value="1UB7p90IVxlFRmBv2ig8ag"></parameter>
+	<parameter name="validPassword" value="123456"></parameter>
+	<parameter name="email" value="test@mailnesia.com"></parameter>
+
 	<parameter name="address" value="Confirm_Address"></parameter>
-	<parameter name="deliveryaddress" value="Confirm_Address"></parameter>
-	<parameter name="size" value="S"></parameter>
+	<parameter name="deliveryaddress" value="Remove"></parameter>
+	<parameter name="searchAddress" value="Edit"></parameter>
+	<parameter name="size" value="M"></parameter>
 	
+	<parameter name="browserType" value="chrome" />
+	<parameter name="url" value="https://plobal-test-shutterstock.myshopify.com/admin"/>
+	
+	<parameter name="cleverTapEmail" value="lee805811@gmail.com"></parameter>
+	<parameter name="cleverTapPassword" value="123456"></parameter>
+
 	<listeners>
 		<listener class-name="com.extent.ExtentReporter" />
 	</listeners>
 
 	<test name="Plobal">
 		<classes>
-			<class name="com.Plobal.TestScripts.PlobalTestScripts" /> 
+			<class name="com.Plobal.TestScripts.PlobalTestScripts" />
 		</classes>
 	</test>
 </suite>

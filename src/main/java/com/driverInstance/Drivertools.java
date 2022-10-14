@@ -48,8 +48,8 @@ public class Drivertools {
 	public static String methodName = "";
 	Date date = new Date();
 	long StartTime;
-	public static Instant startTime ;
-	public static Duration timeElapsed ;
+	public static Instant startTime;
+	public static Duration timeElapsed;
 	private static String DeviceList;
 	private static String TVDeviceList;
 	private static String apk;
@@ -85,8 +85,8 @@ public class Drivertools {
 
 	public static ThreadLocal<WebDriver> tlWebDriver = new ThreadLocal<>();
 
-	public static  ThreadLocal<AppiumDriver<WebElement>> driverTV = new ThreadLocal<>();
-	
+	public static ThreadLocal<AppiumDriver<WebElement>> driverTV = new ThreadLocal<>();
+
 	public static Eyes eyes = new Eyes();
 
 	public static ExtentReporter extent = new ExtentReporter();
@@ -253,18 +253,18 @@ public class Drivertools {
 	public void setDriverVersion(String driverVersion) {
 		this.driverVersion = driverVersion;
 	}
-	
+
 	public static String getTVDeviceList() {
 		return TVDeviceList;
 	}
-	
+
 	@SuppressWarnings("static-access")
 	public void setTVDeviceList(String TVDeviceList) {
 		this.TVDeviceList = TVDeviceList;
 	}
-	
+
 	public static String getENvironment() {
-		return "<h5> ENV : <a href=\""+getENV()+"\" onclick='return "+click+";'\">"+getENV()+"</a></h5>";
+		return "<h5> ENV : <a href=\"" + getENV() + "\" onclick='return " + click + ";'\">" + getENV() + "</a></h5>";
 	}
 
 	public Drivertools(String application) {
@@ -285,7 +285,8 @@ public class Drivertools {
 	{
 		setPlatfrom(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getSuite().getName());
 		setTestName(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getName());
-		setBrowserType(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browserType"));
+		setBrowserType(
+				Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("browserType"));
 		setURL(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("url"));
 		setRunModule(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("runModule"));
 		setRunMode(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("runMode"));
@@ -295,18 +296,19 @@ public class Drivertools {
 				setTVDeviceList(getListOfDevicesConnected().get(1).toString());
 			}
 		}
-		
-		if(getTestName().equals("Android_UserSessionManagement")) {
+
+		if (getTestName().equals("Android_UserSessionManagement")) {
 			setPlatfrom(Utilities.setPlatform);
-		}else if(methodName.equals("TvLogin") || methodName.equals("setting") || methodName.equals("subscription") 
-				|| methodName.equals("continueWatching") || methodName.equals("deviceAuthentication") || methodName.equals("club")
-				|| methodName.equals("onboarding_MP") || methodName.equals("zeelogoVerificationInPlayer") 
-				|| methodName.equals("authenticateInprint") || methodName.equals("premiumLiveChannel") 
-				|| methodName.equals("premiumcontentFromInfo") || methodName.equals("rsvodplayback") 
-				|| methodName.equals("loginPerformance") || methodName.equals("cleverTapValidation")||methodName.equals("profileselection")) {
+		} else if (methodName.equals("TvLogin") || methodName.equals("setting") || methodName.equals("subscription")
+				|| methodName.equals("continueWatching") || methodName.equals("deviceAuthentication")
+				|| methodName.equals("club") || methodName.equals("onboarding_MP")
+				|| methodName.equals("zeelogoVerificationInPlayer") || methodName.equals("authenticateInprint")
+				|| methodName.equals("premiumLiveChannel") || methodName.equals("premiumcontentFromInfo")
+				|| methodName.equals("rsvodplayback") || methodName.equals("loginPerformance")
+				|| methodName.equals("cleverTapValidation") || methodName.equals("profileselection") ||  methodName.equals("plobalCleverTap")){
 			setPlatfrom("Web");
 		}
-		
+
 		try {
 			connectURL = new URL("https://www.google.com");
 			connection = connectURL.openConnection();
@@ -316,18 +318,21 @@ public class Drivertools {
 			System.out.println("<<<<<<---- Network is Down  ---->>>>>>>");
 			System.exit(0);
 		}
-		
-		 if (getPlatform().equals("Android")) {
-			setENV("Native App");
-			setApk(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("Platform"));
-			click = false;
-		} else if (getPlatform().equals("ios")) {
-			setENV("Native");
-			click = false;
+
+		if (getPlatform().equals("Web")) {
+			if (getURL().equals("https://plobal-test-shutterstock.myshopify.com/admin")) {
+				setENV(getURL());
+			} else if (getPlatform().equals("Android")) {
+				setENV("Native App");
+				setApk(Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("Platform"));
+				click = false;
+			} else if (getPlatform().equals("ios")) {
+				setENV("Native");
+				click = false;
+			}
 		}
-		
 		logger.info("PlatForm :: " + getPlatform());
-		if (Stream.of("Android", "ios").anyMatch(getPlatform()::equals)) {
+		if (Stream.of("Android", "ios", "Web").anyMatch(getPlatform()::equals)) {
 			setHandler(new PropertyFileReader("properties/ExecutionControl.properties"));
 			if (getHandler().getproperty(getTestName()).equals("Y") && (getRunMode().contentEquals(getTestName()))
 					|| (getRunMode().contentEquals("Suites"))) {
@@ -344,8 +349,7 @@ public class Drivertools {
 			throw new SkipException("PlatForm not matched...");
 		}
 	}
-	
-	
+
 	public static ArrayList<String> getListOfDevicesConnected() {
 		ArrayList<String> deviceID = new ArrayList<>();
 		try {
@@ -356,7 +360,7 @@ public class Drivertools {
 			Thread.sleep(1000);
 			while (!(s = br.readLine()).isEmpty()) {
 				if (!s.equals("List of devices attached")) {
-						deviceID.add(s.replaceAll("device", "").trim());
+					deviceID.add(s.replaceAll("device", "").trim());
 				}
 			}
 			return deviceID;

@@ -30,7 +30,7 @@ public class PlobalLoginPage {
 	
 	// logout Profile Tab
 		public static By objLogoutProfileTab = By.xpath(
-				"(//*[@class='android.widget.HorizontalScrollView']/child::android.widget.LinearLayout/descendant::android.widget.ImageView)[5]");
+				"(//*[@class='android.widget.HorizontalScrollView']/child::android.widget.LinearLayout/descendant::android.widget.ImageView)[4]");
 
 	// Login Btn
 	public static By objLoginBtn = By

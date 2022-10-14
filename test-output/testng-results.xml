@@ -1,66 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-10-04T17:46:16 IST" name="Android" finished-at="2022-10-04T17:52:50 IST" duration-ms="394317">
+  <suite started-at="2022-10-14T20:02:42 IST" name="Android" finished-at="2022-10-14T20:06:36 IST" duration-ms="233680">
     <groups>
     </groups>
-    <test started-at="2022-10-04T17:46:16 IST" name="Plobal" finished-at="2022-10-04T17:52:50 IST" duration-ms="394317">
+    <test started-at="2022-10-14T20:02:42 IST" name="Plobal" finished-at="2022-10-14T20:06:36 IST" duration-ms="233680">
       <class name="com.Plobal.TestScripts.PlobalTestScripts">
-        <test-method is-config="true" signature="Before()[pri:0, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:46:26 IST" name="Before" finished-at="2022-10-04T17:46:38 IST" duration-ms="12116" status="PASS">
+        <test-method is-config="true" signature="Before()[pri:0, instance:com.Plobal.TestScripts.PlobalTestScripts@4275c20c]" started-at="2022-10-14T20:02:56 IST" name="Before" finished-at="2022-10-14T20:03:10 IST" duration-ms="14549" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Before -->
-        <test-method signature="plobalAppLaunch()[pri:0, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:46:38 IST" name="plobalAppLaunch" finished-at="2022-10-04T17:46:57 IST" duration-ms="18890" status="PASS">
+        <test-method signature="plobalAppLaunch()[pri:0, instance:com.Plobal.TestScripts.PlobalTestScripts@4275c20c]" started-at="2022-10-14T20:03:10 IST" name="plobalAppLaunch" finished-at="2022-10-14T20:03:23 IST" duration-ms="13022" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- plobalAppLaunch -->
-        <test-method signature="plobalLogin()[pri:1, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:47:07 IST" name="plobalLogin" finished-at="2022-10-04T17:47:39 IST" duration-ms="31574" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- plobalLogin -->
-        <test-method signature="plobalSelectItem(java.lang.String)[pri:2, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:47:45 IST" name="plobalSelectItem" finished-at="2022-10-04T17:48:06 IST" duration-ms="20829" status="PASS">
+        <test-method signature="plobalLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.Plobal.TestScripts.PlobalTestScripts@4275c20c]" started-at="2022-10-14T20:03:26 IST" name="plobalLogin" finished-at="2022-10-14T20:03:56 IST" duration-ms="30471" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[S]]>
+                <![CDATA[abc@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1UB7p90IVxlFRmBv2ig8ag]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[test@mailnesia.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- plobalLogin -->
+        <test-method signature="plobalSelectItem(java.lang.String)[pri:2, instance:com.Plobal.TestScripts.PlobalTestScripts@4275c20c]" started-at="2022-10-14T20:03:58 IST" name="plobalSelectItem" finished-at="2022-10-14T20:04:20 IST" duration-ms="21901" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[M]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- plobalSelectItem -->
-        <test-method signature="plobalPaymentOption()[pri:4, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:48:14 IST" name="plobalPaymentOption" finished-at="2022-10-04T17:48:15 IST" duration-ms="435" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- plobalPaymentOption -->
-        <test-method signature="plobalDeliveryAddress(java.lang.String)[pri:5, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:48:25 IST" name="plobalDeliveryAddress" finished-at="2022-10-04T17:49:50 IST" duration-ms="85655" status="PASS">
+        <test-method signature="plobalCleverTap(java.lang.String, java.lang.String, java.lang.String)[pri:8, instance:com.Plobal.TestScripts.PlobalTestScripts@4275c20c]" started-at="2022-10-14T20:04:20 IST" name="plobalCleverTap" finished-at="2022-10-14T20:06:35 IST" duration-ms="134839" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Confirm_Address]]>
+                <![CDATA[lee805811@gmail.com]]>
               </value>
             </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- plobalDeliveryAddress -->
-        <test-method signature="plobalSearchProduct(java.lang.String)[pri:6, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:50:01 IST" name="plobalSearchProduct" finished-at="2022-10-04T17:51:59 IST" duration-ms="118466" status="PASS">
-          <params>
-            <param index="0">
+            <param index="1">
               <value>
-                <![CDATA[Confirm_Address]]>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[test@mailnesia.com]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [1400] but found [$17,01 ]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [1400] but found [$17,01 ]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at com.business.Plobal.PlobalBusinessLogic.productViewedCleverTap(PlobalBusinessLogic.java:547)
+at com.business.Plobal.PlobalBusinessLogic.cleverTap(PlobalBusinessLogic.java:503)
+at com.Plobal.TestScripts.PlobalTestScripts.plobalCleverTap(PlobalTestScripts.java:79)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- plobalSearchProduct -->
-        <test-method signature="plobalLogout()[pri:7, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:52:28 IST" name="plobalLogout" finished-at="2022-10-04T17:52:39 IST" duration-ms="11344" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- plobalLogout -->
-        <test-method is-config="true" signature="plobalAppQuit()[pri:0, instance:com.Plobal.TestScripts.PlobalTestScripts@40258c2f]" started-at="2022-10-04T17:52:50 IST" name="plobalAppQuit" finished-at="2022-10-04T17:52:50 IST" duration-ms="555" status="PASS">
+        </test-method> <!-- plobalCleverTap -->
+        <test-method is-config="true" signature="plobalAppQuit()[pri:0, instance:com.Plobal.TestScripts.PlobalTestScripts@4275c20c]" started-at="2022-10-14T20:06:35 IST" name="plobalAppQuit" finished-at="2022-10-14T20:06:36 IST" duration-ms="720" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- plobalAppQuit -->
