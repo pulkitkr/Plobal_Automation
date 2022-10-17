@@ -2443,4 +2443,15 @@ public class Utilities extends ExtentReporter {
 		eventChange = eventChange.toUpperCase();
 		return eventChange;
 	}
+	
+	public String stringName(boolean value) {
+		String s= " ";
+		if(value == true) {
+			s = "matching";
+			
+		} else {
+			s = "not matching";
+		}
+		return s;
+	}
 }

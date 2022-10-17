@@ -75,7 +75,7 @@ public class PlobalLoginPage {
 
 	// Select First product
 	public static By objCollectionFirstProduct = By.xpath(
-			"(//*[@resource-id='plobaltestshutterstock.android.staging:id/home_viewtype_collectionproduct_title_text']/parent::android.widget.RelativeLayout/following-sibling::android.widget.RelativeLayout/descendant::android.widget.ImageView)[1]");
+			"(//*[@resource-id='plobaltestshutterstock.android.staging:id/home_viewtype_collectionproduct_title_text']/parent::android.widget.RelativeLayout/following-sibling::android.widget.RelativeLayout/descendant::android.widget.ImageView)[3]");
 
 	// Search Bar
 	public static By objSearchBar = By.xpath("//*[@text='Search products']");

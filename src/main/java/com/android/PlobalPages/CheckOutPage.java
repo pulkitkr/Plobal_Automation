@@ -126,4 +126,34 @@ public class CheckOutPage {
 	
 	//place order button
 	public static By objplaceOrderBtn = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/btn_place_order']");
+	
+	//Name
+	public static By objName = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/address_shipping_selected_address_textview_name']");
+	
+	//Address
+	public static By objCheckAddress = By.xpath("(//*[@resource-id='plobaltestshutterstock.android.staging:id/add_address_title_textView']/parent::android.widget.RelativeLayout/following-sibling::android.widget.ScrollView/descendant::android.widget.EditText)[5]");
+	
+	//City
+	public static By objAddressCountry = By.xpath("(//*[@resource-id='plobaltestshutterstock.android.staging:id/ui_spinner']");
+	
+	//State  
+	public static By objAddressState = By.xpath("(//*[@resource-id='plobaltestshutterstock.android.staging:id/add_address_title_textView']/parent::android.widget.RelativeLayout/following-sibling::android.widget.ScrollView/descendant::android.widget.EditText)[7]");
+	
+	//Country
+	public static By objAddressCity = By.xpath("(//*[@resource-id='plobaltestshutterstock.android.staging:id/add_address_title_textView']/parent::android.widget.RelativeLayout/following-sibling::android.widget.ScrollView/descendant::android.widget.EditText)[8]");
+	
+	//ZIp code
+	public static By objAddressPin = By.xpath("(//*[@resource-id='plobaltestshutterstock.android.staging:id/add_address_title_textView']/parent::android.widget.RelativeLayout/following-sibling::android.widget.ScrollView/descendant::android.widget.EditText)[9]");
+	
+	//Mobile no
+	public static By objAddressMobileNo = By.xpath("(//*[@resource-id='plobaltestshutterstock.android.staging:id/add_address_title_textView']/parent::android.widget.RelativeLayout/following-sibling::android.widget.ScrollView/descendant::android.widget.EditText)[4]");
+	
+	//Charged Amt
+	public static By objChargedAmt = By.xpath("(//*[@resource-id='plobaltestshutterstock.android.staging:id/single_checkout_statusbar_total_textview']");
+	
+	//UserName
+	public static By objUserName = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/textview_user_name']");
+	
+	//UserName
+	public static By objEmail = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/textview_user_email']");
 }

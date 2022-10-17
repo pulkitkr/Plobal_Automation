@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="1" name="Failed suite [Android]" guice-stage="DEVELOPMENT">
   <parameter name="address" value="Confirm_Address"/>
-  <parameter name="searchAddress" value="Edit"/>
+  <parameter name="searchAddress" value="Confirm_Address"/>
   <parameter name="invalidEmailId" value="abc@gmail.com"/>
   <parameter name="invalidPassword" value="1UB7p90IVxlFRmBv2ig8ag"/>
   <parameter name="runMode" value="Suites"/>
@@ -10,11 +10,11 @@
   <parameter name="browserType" value="chrome"/>
   <parameter name="testExecutionKey" value="PP-59"/>
   <parameter name="cleverTapPassword" value="123456"/>
-  <parameter name="size" value="M"/>
+  <parameter name="size" value="L"/>
   <parameter name="runModule" value="Suite"/>
   <parameter name="validEmailId" value="test@mailnesia.com"/>
   <parameter name="validPassword" value="123456"/>
-  <parameter name="deliveryaddress" value="Remove"/>
+  <parameter name="deliveryaddress" value="Confirm_Address"/>
   <parameter name="cleverTapEmail" value="lee805811@gmail.com"/>
   <parameter name="email" value="test@mailnesia.com"/>
   <listeners>

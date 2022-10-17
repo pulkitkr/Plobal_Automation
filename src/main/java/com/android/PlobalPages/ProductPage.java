@@ -62,4 +62,19 @@ public class ProductPage {
 	
 	//Product Price
 	public static By objProductPrice = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/txt_price_discounted']");
+	
+	//Product card title
+	public static By objProductCartTitle = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/txtview_product_name']");
+	
+	//Product card variant name
+	public static By objProductCartVariant = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/shopping_cart_item_variant_option_1']");
+	
+	//Product card price
+	public static By objProductCartPrice = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/txt_price_discounted']");
+	
+	//total product in cart
+	public static By objTotalProduct = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/single_checkout_statusbar_item_count_textview']");
+	
+	//total cart amount
+	public static By objTotalAmt = By.xpath("//*[@resource-id='plobaltestshutterstock.android.staging:id/summary_order_details_total_value_TextView']");
 }

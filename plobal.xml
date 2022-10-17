@@ -15,9 +15,9 @@
 	<parameter name="email" value="test@mailnesia.com"></parameter>
 
 	<parameter name="address" value="Confirm_Address"></parameter>
-	<parameter name="deliveryaddress" value="Remove"></parameter>
-	<parameter name="searchAddress" value="Edit"></parameter>
-	<parameter name="size" value="M"></parameter>
+	<parameter name="deliveryaddress" value="Confirm_Address"></parameter>
+	<parameter name="searchAddress" value="Confirm_Address"></parameter>
+	<parameter name="size" value="L"></parameter>
 	
 	<parameter name="browserType" value="chrome" />
 	<parameter name="url" value="https://plobal-test-shutterstock.myshopify.com/admin"/>
